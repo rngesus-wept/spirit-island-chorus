@@ -3,16 +3,91 @@
 This is an add-on for [[https://steamcommunity.com/sharedfiles/filedetails/?id=2104364163][MJ & iakona's Spirit Island module]], which patches in assets from
 Reddit user Choir87's rework project ([[https://www.reddit.com/r/spiritisland/comments/1hky3o7/comprehensive_rework_project_part_5_lightnings/][latest post]]).
 
-SAVE="/home/charlest/.local/share/Tabletop Simulator/Saves/TS_Save_101.json"
-tts unpack "$SAVE" && find . \( -type d -name .git -prune \) -o -type f -print0 | xargs -0 sed -r -i 's/(scale.\"): 2.74/\1: 2.75/g'
-tts repack && cp build/packed-savegame.json "$SAVE"
-find . \( -type d -name .git -prune \) -o -type f -print0 | xargs -0 sed -r -i 's,https://i.imgur.com/LyIUyqG.jpg,https://i.imgur.com/8WUHu0p.jpg,g'
+* Working with JSON
 
+While the final object does need to be a single JSON file, it is version-controlled in a way
+that maps each object and/or script to a file recursively, so that it's a little easier to
+isolate changes to specific components. This is done using [[https://pypi.org/project/tabletop-tools/][tabletop-tools]]. To build or
+manipulate it yourself, the following shell commands are useful:
 
-http://cloud-3.steamusercontent.com/ugc/1997944160872770039/AA3DC905AE1BD5684FB087F2A8A4642DDB16633D/
+Set your target filename to avoid having to hunt for it all the time.
+#+BEGIN_SRC sh
+  SAVE="$HOME/.local/share/Tabletop Simulator/Saves/TS_Save_105.json"
+#+END_SRC
 
+After unpacking, replace certain floating-point values that are prone to wobbling due to
+TTS's nature as a physics sandbox. (As a reminder, =tts unpack= should only ever be run in
+this root directory; it does not attempt to look "upward" to find a plausible root, so don't
+nest a copy of the project inside itself!)
+#+BEGIN_SRC sh
+  tts unpack "$SAVE" && \
+      find . \( -type d -name .git -prune \) -o -type f -print0 | xargs -0 sed -r -i 's/(scale.\"): 2.74/\1: 2.75/g'
+#+END_SRC
 
-* Steps to create top-level object
+Build step.
+#+BEGIN_SRC sh
+  tts repack && cp build/packed-savegame.json "$SAVE"
+#+END_SRC
 
-1. Create actual object -- probably a bag, which will contain all of the required components.
-2. 
+Because cards are often cut from a larger "decksheet" image, when patching them it can be
+useful to replace an asset entirely, even if this touches cards that aren't technically
+affected by the change.
+#+BEGIN_SRC sh
+  find . \( -type d -name .git -prune \) -o -type f -print0 | xargs -0 sed -r -i 's,https://i.imgur.com/LyIUyqG.jpg,https://i.imgur.com/8WUHu0p.jpg,g'
+#+END_SRC
+
+* Adding additional spirits
+
+As a step 0, the process of taking a spirit from raw content to a TTS object requires the
+translation of that content through the [[https://spiritislandbuilder.com/][Spirit Island builder]]. The next steps depend on
+exactly what it is that's being added.
+
+** Spirit board
+
+From the SI builder, both download the image *and* export the TTS file. The JSON will be
+automatically made with a lot of the code (e.g. scripted thresholds, snap points) required
+for the TTS object, but it will be missing pointers to the actual graphics, so downloading
+both will be necessary. Currently, we do not replace the backs of the spirit boards (though
+in theory one probably ought to at least add a little credit in there or something).
+
+1. Load the main module into TTS, with scripting enabled (this is the default).
+2. In your filesystem, place the JSON in your Saved Objects. On a Linux box this is at
+   =$HOME/.local/share/Tabletop Simulator/Saves/Saved Objects=.
+3. In TTS, pull the spirit board for the target spirit out of its bag -- the setup panels
+   for the spirits are all bags, and the spirit board is always the topmost object.
+4. Right click on the board and select "Custom" (probably the third item in the menu).
+5. Copy the URL in the "Bottom Image" field. You can now close the Custom window.
+6. Load in your new JSON object (Objects > Saved Objects). It will spawn in as a blank white
+   square and open a Custom window because it's missing URLs.
+7. In the Bottom Image field, paste in the URL you copied in step 5.
+8. In the Top Image field, click the folder icon and find the new image for the front.
+9. When TTS asks you to choose between Cloud and Local storage, choose Cloud.
+10. Click Import.
+
+You now have a more complete TTS file for the spirit board. Right click it and Save Object;
+it is reasonable to replace your original exported file with this one.
+
+Finding the board back URL can also be done from the command line if you have a
+JSON-exploded version of the main module.
+#+BEGIN_SRC sh
+  grep ImageSecondaryURL `git grep -l "$NAME_OF_SPIRIT"` | cut -d\" -f4 | head -n 1
+#+END_SRC
+
+** Power cards
+
+Power cards behave a lot like the spirit board, except that hunting down the back image for
+the card is a little more tedious. The easiest way is to have a [[https://pypi.org/project/tabletop-tools/][tabletop-tools]]-exploded
+version of the main module that is also under version control. Then, instead of steps 3-5
+above:
+
+3. Find the JSON file for the card you're replacing by using =git grep "$NAME_OF_CARD"=. If
+   you are adding a unique power rather than replacing one, use the name of another unique
+   power from the same spirit.
+4. Open this file and copy the value of the =BackURL= attribute.
+
+This can all be done in one line with
+#+BEGIN_SRC sh
+  grep BackURL `git grep -l "$NAME_OF_CARD"` | cut -d\" -f4
+#+END_SRC
+
+* In-game patch notes
