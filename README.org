@@ -68,7 +68,7 @@ You now have a more complete TTS file for the spirit board. Right click it and S
 it is reasonable to replace your original exported file with this one.
 
 Finding the board back URL can also be done from the command line if you have a
-JSON-exploded version of the main module.
+JSON-exploded version of the main module in its own Git repo.
 #+BEGIN_SRC sh
   grep ImageSecondaryURL `git grep -l "$NAME_OF_SPIRIT"` | cut -d\" -f4 | head -n 1
 #+END_SRC
@@ -77,8 +77,8 @@ JSON-exploded version of the main module.
 
 Power cards behave a lot like the spirit board, except that hunting down the back image for
 the card is a little more tedious. The easiest way is to have a [[https://pypi.org/project/tabletop-tools/][tabletop-tools]]-exploded
-version of the main module that is also under version control. Then, instead of steps 3-5
-above:
+version of the main module that is also under Git version control. Then, instead of steps
+3-5 above:
 
 3. Find the JSON file for the card you're replacing by using =git grep "$NAME_OF_CARD"=. If
    you are adding a unique power rather than replacing one, use the name of another unique
@@ -89,5 +89,44 @@ This can all be done in one line with
 #+BEGIN_SRC sh
   grep BackURL `git grep -l "$NAME_OF_CARD"` | cut -d\" -f4
 #+END_SRC
+
+** Aspects
+
+Aspects function mostly like power cards, but some aspects have additional modifiers that
+change how scripting on other components should work. For example, Lightning's Immense
+aspect doubles its top-track Energy income during Growth. Creation proceeds just like it
+would for a power card, but afterward you will also have to attach scripting to the object.
+You could do this through the TTS interface (Right click > Scripting > Scripting editor)
+before saving the object. Alternatively, if you're using an exploded view like this repo is,
+adding a script.lua adjacent to the card's object.json is equivalent.
+
+The details of exactly what scripting should be written depends on what you want to do, so
+we will just point to examples of interesting behavior. The general approach is to directly
+manipulate the JSON or script state of the spirit, which is all stored in the /spirit board/
+at runtime. Note also that scripts have a =onDestroy= method associated with the aspect card
+that reverses those changes.
+
+  * Lightning's Immense (GUID 241617) doubles energy gain from the top track.
+  * Keeper's Spreading Hostility (GUID e738ed) halves energy gain from the top track and
+    grants 1 Energy on setup.
+  * Shadow's Dark Fire (GUID 09004a) grants an extra Moon/Fire element passively, *and*
+    contains scripting that causes the element counter to treat them interchangeably, *and*
+    performs a card replacement from the Minor deck on startup.
+  * Green's Regrowth (GUID ca636b) spawns extra presence markers.
+  * Memory's Mentor (GUID b1c66b) changes the number of cards drawn when drafting a Power.
+
+Of course, if the rule change imposed by your aspect is not covered here, you'll either have
+to figure out how to hook it into the entire system or (more likely) forgo automation (which
+isn't so bad).
+
+** Putting it all together
+
+So now you've got a bunch of saved objects and you want to integrate them into this module.
+The direct approach is to bag everything up within TTS and then simply save a new version of
+the top level bag for this module (and then do further tweaks as necessary). If you prefer
+to work outside of TTS when possible, the general idea is that objects must be added in
+hierarchy and respect =index.list=; that is, in addition to adding .json and .lua files to a
+folder tree that includes =contained/= layers, you must also remember to add an object's GUID
+to =index.list= at the appropriate level.
 
 * In-game patch notes
