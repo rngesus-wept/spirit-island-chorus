@@ -1,0 +1,228 @@
+{
+  "SaveName": "",
+  "Date": "",
+  "VersionNumber": "",
+  "GameMode": "",
+  "GameType": "",
+  "GameComplexity": "",
+  "Tags": [],
+  "Gravity": 0.5,
+  "PlayArea": 0.5,
+  "Table": "",
+  "Sky": "",
+  "Note": "",
+  "TabStates": {},
+  "LuaScript": "",
+  "LuaScriptState": "",
+  "XmlUI": "",
+  "ObjectStates": [
+    {
+      "GUID": "279d44",
+      "Name": "CardCustom",
+      "Transform": {
+        "posX": 29.2182236,
+        "posY": 0.8267039,
+        "posZ": -28.960598,
+        "rotX": 4.654874E-09,
+        "rotY": 179.99823,
+        "rotZ": -1.928767E-08,
+        "scaleX": 1.53,
+        "scaleY": 1.0,
+        "scaleZ": 1.53
+      },
+      "Nickname": "Sunshine",
+      "Description": "",
+      "GMNotes": "",
+      "AltLookAngle": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "ColorDiffuse": {
+        "r": 0.7132,
+        "g": 0.7132,
+        "b": 0.7132
+      },
+      "Tags": [
+        "Aspect",
+        "Setup"
+      ],
+      "LayoutGroupSortIndex": 0,
+      "Value": 0,
+      "Locked": false,
+      "Grid": false,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": true,
+      "Hands": true,
+      "CardID": 260700,
+      "SidewaysCard": false,
+      "CustomDeck": {
+        "2607": {
+          "FaceURL": "https://steamusercontent-a.akamaihd.net/ugc/2408949625514237270/5487718F0A06CB1FB47D581A5E03D71566F1CE93/",
+          "BackURL": "https://steamusercontent-a.akamaihd.net/ugc/2050879209175597317/3D310D899EAA785515F689691EAC56C7E80DE5C4/",
+          "NumWidth": 1,
+          "NumHeight": 1,
+          "BackIsHidden": true,
+          "UniqueBack": false,
+          "Type": 0
+        }
+      },
+      "LuaScript": "function onLoad(saved_data)\n    if saved_data ~= \"\" then\n        local loaded_data = JSON.decode(saved_data)\n        self.setTable(\"thresholds\", loaded_data.thresholds)\n    end\nend\n-- card loading end\nspiritName = \"River Surges in Sunlight\"\n\nfunction doSetup(params)\n    local color = params.color\n    for _, card in pairs(Player[color].getHandObjects(1)) do\n        if card.getName() == \"Boon of Vigor\" then\n            card.destruct()\n            Global.call(\"giveEnergy\", {color=color, energy=1, ignoreDebt=false})\n            break\n        end\n    end\n    return true\nend",
+      "LuaScriptState": "{\"setupComplete\":true,\"thresholds\":[{\"elements\":\"20000000\",\"position\":{\"x\":1.02,\"y\":0,\"z\":-0.27}},{\"elements\":\"30001000\",\"position\":{\"x\":1.02,\"y\":0,\"z\":0.01}},{\"elements\":\"40012000\",\"position\":{\"x\":1.02,\"y\":0,\"z\":0.32}},{\"elements\":\"41012000\",\"position\":{\"x\":1.02,\"y\":0,\"z\":0.79}}]}",
+      "XmlUI": ""
+    },
+    {
+      "GUID": "River_Surges_in_Sunlight",
+      "Name": "Custom_Tile",
+      "Transform": {
+        "posX": 5.86156845,
+        "posY": 0.0567052364,
+        "posZ": 8.434919,
+        "rotX": 0.737870753,
+        "rotY": 180.016891,
+        "rotZ": 4.77324757E-05,
+        "scaleX": 5.46,
+        "scaleY": 1.0,
+        "scaleZ": 5.46
+      },
+      "Nickname": "River Surges in Sunlight",
+      "Description": "",
+      "GMNotes": "",
+      "AltLookAngle": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "ColorDiffuse": {
+        "r": 0.200299919,
+        "g": 0.160299927,
+        "b": 0.151799947
+      },
+      "Tags": [
+        "Spirit"
+      ],
+      "LayoutGroupSortIndex": 0,
+      "Value": 0,
+      "Locked": false,
+      "Grid": false,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": false,
+      "Hands": false,
+      "CustomImage": {
+        "ImageURL": "https://steamusercontent-a.akamaihd.net/ugc/2408949625514180587/AF84EB9681BEB49ED16CB02CCBD3E03550DAC7B5/",
+        "ImageSecondaryURL": "https://steamusercontent-a.akamaihd.net/ugc/2050879298322035488/7BDBAE39DC2599A0B10E8C4ABEA7F0841EF960D5/",
+        "ImageScalar": 1.0,
+        "WidthScale": 0.0,
+        "CustomTile": {
+          "Type": 0,
+          "Thickness": 0.2,
+          "Stackable": false,
+          "Stretch": true
+        }
+      },
+      "LuaScript": "-- Spirit Panel for MJ & iakona's Spirit Island Mod --\nuseProgression = false\nuseAspect = 2\n\nfunction onLoad(saved_data)\n    Color.Add(\"SoftBlue\", Color.new(0.53,0.92,1))\n    Color.Add(\"SoftYellow\", Color.new(1,0.8,0.5))\n    getObjectFromGUID(\"SourceSpirit\").call(\"load\", {obj = self, saved_data = saved_data})\nend",
+      "LuaScriptState": "{\"bonusEnergy\":[],\"thresholds\":[{\"elements\":\"10002000\",\"position\":{\"x\":0.3381,\"y\":0,\"z\":0.3807}},{\"elements\":\"20003000\",\"position\":{\"x\":0.3381,\"y\":0,\"z\":0.4963}},{\"elements\":\"40005200\",\"position\":{\"x\":0.3381,\"y\":0,\"z\":0.6119}}],\"trackElements\":[{\"elements\":\"10000000\",\"position\":{\"x\":-0.2753,\"y\":0,\"z\":-0.4427}},{\"elements\":\"10000000\",\"position\":{\"x\":-0.7307,\"y\":0,\"z\":-0.4427}},{\"elements\":\"00001000\",\"position\":{\"x\":-0.2753,\"y\":0,\"z\":-0.113}}],\"trackEnergy\":[{\"count\":5,\"position\":{\"x\":-1.1861,\"y\":0,\"z\":-0.4427}},{\"count\":4,\"position\":{\"x\":-0.9584,\"y\":0,\"z\":-0.4427}},{\"count\":3,\"position\":{\"x\":-0.503,\"y\":0,\"z\":-0.4427}},{\"count\":2,\"position\":{\"x\":-0.0476,\"y\":0,\"z\":-0.4427}},{\"count\":1,\"position\":{\"x\":0.1801,\"y\":0,\"z\":-0.4427}}]}",
+      "XmlUI": "",
+      "AttachedSnapPoints": [
+        {
+          "Position": {
+            "x": -0.0476,
+            "y": 0.2,
+            "z": -0.4427
+          }
+        },
+        {
+          "Position": {
+            "x": -0.2753,
+            "y": 0.2,
+            "z": -0.4427
+          }
+        },
+        {
+          "Position": {
+            "x": -0.503,
+            "y": 0.2,
+            "z": -0.4427
+          }
+        },
+        {
+          "Position": {
+            "x": -0.7307,
+            "y": 0.2,
+            "z": -0.4427
+          }
+        },
+        {
+          "Position": {
+            "x": -0.9584,
+            "y": 0.2,
+            "z": -0.4427
+          }
+        },
+        {
+          "Position": {
+            "x": -1.1861,
+            "y": 0.2,
+            "z": -0.4427
+          }
+        },
+        {
+          "Position": {
+            "x": -0.0476,
+            "y": 0.2,
+            "z": -0.113
+          }
+        },
+        {
+          "Position": {
+            "x": -0.2753,
+            "y": 0.2,
+            "z": -0.113
+          }
+        },
+        {
+          "Position": {
+            "x": -0.503,
+            "y": 0.2,
+            "z": -0.113
+          }
+        },
+        {
+          "Position": {
+            "x": -0.7307,
+            "y": 0.2,
+            "z": -0.113
+          }
+        },
+        {
+          "Position": {
+            "x": -0.9584,
+            "y": 0.2,
+            "z": -0.113
+          }
+        },
+        {
+          "Position": {
+            "x": -1.1861,
+            "y": 0.2,
+            "z": -0.113
+          }
+        }
+      ]
+    }
+  ]
+}

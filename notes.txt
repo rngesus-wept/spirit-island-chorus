@@ -1,0 +1,15 @@
+# -*- mode: org -*-
+
+SAVE="/home/charlest/.local/share/Tabletop Simulator/Saves/TS_Save_101.json"
+tts unpack "$SAVE" && find . \( -type d -name .git -prune \) -o -type f -print0 | xargs -0 sed -r -i 's/(scale.\"): 2.74/\1: 2.75/g'
+tts repack && cp build/packed-savegame.json "$SAVE"
+find . \( -type d -name .git -prune \) -o -type f -print0 | xargs -0 sed -r -i 's,https://i.imgur.com/LyIUyqG.jpg,https://i.imgur.com/8WUHu0p.jpg,g'
+
+
+http://cloud-3.steamusercontent.com/ugc/1997944160872770039/AA3DC905AE1BD5684FB087F2A8A4642DDB16633D/
+
+
+* Steps to create top-level object
+
+1. Create actual object -- probably a bag, which will contain all of the required components.
+2. 

@@ -1,0 +1,337 @@
+{
+  "SaveName": "",
+  "Date": "",
+  "VersionNumber": "",
+  "GameMode": "",
+  "GameType": "",
+  "GameComplexity": "",
+  "Tags": [],
+  "Gravity": 0.5,
+  "PlayArea": 0.5,
+  "Table": "",
+  "Sky": "",
+  "Note": "",
+  "TabStates": {},
+  "LuaScript": "",
+  "LuaScriptState": "",
+  "XmlUI": "",
+  "ObjectStates": [
+    {
+      "GUID": "e241a6",
+      "Name": "CardCustom",
+      "Transform": {
+        "posX": 66.1779556,
+        "posY": 0.8267039,
+        "posZ": -38.3625755,
+        "rotX": -1.02048068E-08,
+        "rotY": 180.003189,
+        "rotZ": 6.201514E-09,
+        "scaleX": 1.53,
+        "scaleY": 1.0,
+        "scaleZ": 1.53
+      },
+      "Nickname": "Resilience",
+      "Description": "",
+      "GMNotes": "",
+      "AltLookAngle": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "ColorDiffuse": {
+        "r": 0.7132,
+        "g": 0.7132,
+        "b": 0.7132
+      },
+      "Tags": [
+        "Aspect"
+      ],
+      "LayoutGroupSortIndex": 0,
+      "Value": 0,
+      "Locked": false,
+      "Grid": false,
+      "Snap": false,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": true,
+      "Hands": true,
+      "CardID": 260400,
+      "SidewaysCard": false,
+      "CustomDeck": {
+        "2604": {
+          "FaceURL": "https://steamusercontent-a.akamaihd.net/ugc/2408949625514221650/610E69D0FBB6F1E2A5B41ED23791DD0628B2AD89/",
+          "BackURL": "https://steamusercontent-a.akamaihd.net/ugc/2050879209175599872/EAC4BD2702C1EAC8C5707C6E72DCB418A38D7FB2/",
+          "NumWidth": 1,
+          "NumHeight": 1,
+          "BackIsHidden": true,
+          "UniqueBack": false,
+          "Type": 0
+        }
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": ""
+    },
+    {
+      "GUID": "e55660",
+      "Name": "CardCustom",
+      "Transform": {
+        "posX": 6.59946442,
+        "posY": 0.0,
+        "posZ": -0.000106811523,
+        "rotX": 7.40599E-09,
+        "rotY": 180.000183,
+        "rotZ": 5.0925193E-09,
+        "scaleX": 1.53,
+        "scaleY": 1.0,
+        "scaleZ": 1.53
+      },
+      "Nickname": "Rituals of Destruction",
+      "Description": "",
+      "GMNotes": "",
+      "AltLookAngle": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "ColorDiffuse": {
+        "r": 0.7132,
+        "g": 0.7132,
+        "b": 0.7132
+      },
+      "Tags": [
+        "Slow",
+        "Unique"
+      ],
+      "LayoutGroupSortIndex": 0,
+      "Value": 0,
+      "Locked": false,
+      "Grid": false,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": true,
+      "Hands": true,
+      "CardID": 260500,
+      "SidewaysCard": false,
+      "CustomDeck": {
+        "2605": {
+          "FaceURL": "https://steamusercontent-a.akamaihd.net/ugc/2408949625514225566/9C902603E7E9D99D0B41F890A7AA86F2D1CB7359/",
+          "BackURL": "https://steamusercontent-a.akamaihd.net/ugc/2050875404517383766/C3A66D6C764E830C2886603846EDC1982E69C1B4/",
+          "NumWidth": 1,
+          "NumHeight": 1,
+          "BackIsHidden": true,
+          "UniqueBack": false,
+          "Type": 0
+        }
+      },
+      "LuaScript": "elements=\"11100110\"\nenergy=3",
+      "LuaScriptState": "",
+      "XmlUI": ""
+    },
+    {
+      "GUID": "b59890",
+      "Name": "CardCustom",
+      "Transform": {
+        "posX": 13.19873,
+        "posY": 0.0,
+        "posZ": -5.722046E-05,
+        "rotX": 4.07342871E-09,
+        "rotY": 180.001587,
+        "rotZ": -1.13985816E-08,
+        "scaleX": 1.53,
+        "scaleY": 1.0,
+        "scaleZ": 1.53
+      },
+      "Nickname": "Dark and Tangled Woods",
+      "Description": "",
+      "GMNotes": "",
+      "AltLookAngle": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "ColorDiffuse": {
+        "r": 0.7132,
+        "g": 0.7132,
+        "b": 0.7132
+      },
+      "Tags": [
+        "Fast",
+        "Minor"
+      ],
+      "LayoutGroupSortIndex": 0,
+      "Value": 0,
+      "Locked": false,
+      "Grid": false,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": true,
+      "Hands": true,
+      "CardID": 105600,
+      "SidewaysCard": false,
+      "CustomDeck": {
+        "1056": {
+          "FaceURL": "https://steamusercontent-a.akamaihd.net/ugc/2050875404517332963/C8E470231E8293DEBCBC02585B247E438F23E840/",
+          "BackURL": "https://steamusercontent-a.akamaihd.net/ugc/2050875404517305126/48D7B7BFCF9AC4267E6E624C3915466A4BCFA580/",
+          "NumWidth": 1,
+          "NumHeight": 1,
+          "BackIsHidden": false,
+          "UniqueBack": false,
+          "Type": 0
+        }
+      },
+      "LuaScript": "elements=\"01000110\"\nenergy=1",
+      "LuaScriptState": "",
+      "XmlUI": ""
+    },
+    {
+      "GUID": "Vital_Strength_of_the_Earth",
+      "Name": "Custom_Tile",
+      "Transform": {
+        "posX": 4.488121,
+        "posY": -0.0136045814,
+        "posZ": 9.114502,
+        "rotX": -1.48701504E-08,
+        "rotY": 179.999664,
+        "rotZ": 3.42213262E-08,
+        "scaleX": 5.46,
+        "scaleY": 1.0,
+        "scaleZ": 5.46
+      },
+      "Nickname": "Vital Strength of the Earth",
+      "Description": "",
+      "GMNotes": "",
+      "AltLookAngle": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "ColorDiffuse": {
+        "r": 0.200299948,
+        "g": 0.160299957,
+        "b": 0.151799977
+      },
+      "Tags": [
+        "Spirit"
+      ],
+      "LayoutGroupSortIndex": 0,
+      "Value": 0,
+      "Locked": false,
+      "Grid": false,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": false,
+      "Hands": false,
+      "CustomImage": {
+        "ImageURL": "https://steamusercontent-a.akamaihd.net/ugc/2408949625514207193/6691FAB34D338550A2D1BE42D83A6E78DED772E3/",
+        "ImageSecondaryURL": "https://steamusercontent-a.akamaihd.net/ugc/2050879298322029637/8C13B31742100566AEEC9DE9B0DA90CF92F5D465/",
+        "ImageScalar": 1.0,
+        "WidthScale": 0.0,
+        "CustomTile": {
+          "Type": 0,
+          "Thickness": 0.2,
+          "Stackable": false,
+          "Stretch": true
+        }
+      },
+      "LuaScript": "-- Spirit Panel for MJ & iakona's Spirit Island Mod --\nuseProgression = false\nuseAspect = 2\n\nfunction onLoad(saved_data)\n    Color.Add(\"SoftBlue\", Color.new(0.53,0.92,1))\n    Color.Add(\"SoftYellow\", Color.new(1,0.8,0.5))\n    getObjectFromGUID(\"SourceSpirit\").call(\"load\", {obj = self, saved_data = saved_data})\nend",
+      "LuaScriptState": "{\"bonusEnergy\":[],\"thresholds\":[{\"elements\":\"10000210\",\"position\":{\"x\":0.3381,\"y\":0,\"z\":0.3484}},{\"elements\":\"20000320\",\"position\":{\"x\":0.3381,\"y\":0,\"z\":0.464}},{\"elements\":\"30000430\",\"position\":{\"x\":0.3381,\"y\":0,\"z\":0.5796}}],\"trackElements\":[{\"elements\":\"00000100\",\"position\":{\"x\":-0.503,\"y\":0,\"z\":-0.1453}}],\"trackEnergy\":[{\"count\":8,\"position\":{\"x\":-0.9584,\"y\":0,\"z\":-0.4749}},{\"count\":7,\"position\":{\"x\":-0.7307,\"y\":0,\"z\":-0.4749}},{\"count\":6,\"position\":{\"x\":-0.503,\"y\":0,\"z\":-0.4749}},{\"count\":4,\"position\":{\"x\":-0.2753,\"y\":0,\"z\":-0.4749}},{\"count\":3,\"position\":{\"x\":-0.0476,\"y\":0,\"z\":-0.4749}},{\"count\":2,\"position\":{\"x\":0.1801,\"y\":0,\"z\":-0.4749}}]}",
+      "XmlUI": "",
+      "AttachedSnapPoints": [
+        {
+          "Position": {
+            "x": -0.0476,
+            "y": 0.2,
+            "z": -0.4749
+          }
+        },
+        {
+          "Position": {
+            "x": -0.2753,
+            "y": 0.2,
+            "z": -0.4749
+          }
+        },
+        {
+          "Position": {
+            "x": -0.503,
+            "y": 0.2,
+            "z": -0.4749
+          }
+        },
+        {
+          "Position": {
+            "x": -0.7307,
+            "y": 0.2,
+            "z": -0.4749
+          }
+        },
+        {
+          "Position": {
+            "x": -0.9584,
+            "y": 0.2,
+            "z": -0.4749
+          }
+        },
+        {
+          "Position": {
+            "x": -0.0476,
+            "y": 0.2,
+            "z": -0.1453
+          }
+        },
+        {
+          "Position": {
+            "x": -0.2753,
+            "y": 0.2,
+            "z": -0.1453
+          }
+        },
+        {
+          "Position": {
+            "x": -0.503,
+            "y": 0.2,
+            "z": -0.1453
+          }
+        },
+        {
+          "Position": {
+            "x": -0.7307,
+            "y": 0.2,
+            "z": -0.1453
+          }
+        },
+        {
+          "Position": {
+            "x": -0.9584,
+            "y": 0.2,
+            "z": -0.1453
+          }
+        }
+      ]
+    }
+  ]
+}
