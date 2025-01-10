@@ -1,5 +1,8 @@
 # -*- mode: org -*-
 
+This is an add-on for [[https://steamcommunity.com/sharedfiles/filedetails/?id=2104364163][MJ & iakona's Spirit Island module]], which patches in assets from
+Reddit user Choir87's rework project ([[https://www.reddit.com/r/spiritisland/comments/1hky3o7/comprehensive_rework_project_part_5_lightnings/][latest post]]).
+
 SAVE="/home/charlest/.local/share/Tabletop Simulator/Saves/TS_Save_101.json"
 tts unpack "$SAVE" && find . \( -type d -name .git -prune \) -o -type f -print0 | xargs -0 sed -r -i 's/(scale.\"): 2.74/\1: 2.75/g'
 tts repack && cp build/packed-savegame.json "$SAVE"
