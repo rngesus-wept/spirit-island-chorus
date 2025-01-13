@@ -1,19 +1,19 @@
 {
   "Name": "Custom_Tile",
   "Transform": {
-    "posX": 87.5502,
-    "posY": 2.8667,
-    "posZ": -11.5678,
-    "rotX": 0.0,
-    "rotY": 180.0,
-    "rotZ": 0.0,
+    "posX": 103.8093,
+    "posY": 5.3539,
+    "posZ": 46.8819,
+    "rotX": 359.9125,
+    "rotY": 179.9999,
+    "rotZ": 0.7853,
     "scaleX": 5.46,
     "scaleY": 1.0,
     "scaleZ": 5.46
   },
   "Nickname": "River Surges in Sunlight",
   "Description": "",
-  "GMNotes": "",
+  "GMNotes": "f9ea89",
   "AltLookAngle": {
     "x": 0.0,
     "y": 0.0,
