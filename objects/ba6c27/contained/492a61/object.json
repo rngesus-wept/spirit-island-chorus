@@ -1,17 +1,17 @@
 {
   "Name": "Bag",
   "Transform": {
-    "posX": 101.66,
-    "posY": 0.396,
-    "posZ": 18.78,
-    "rotX": 0.0,
-    "rotY": 0.0001,
-    "rotZ": 0.0,
-    "scaleX": 2.2,
-    "scaleY": 2.2,
-    "scaleZ": 2.2
+    "posX": 101.6596,
+    "posY": 5.1458,
+    "posZ": 19.88,
+    "rotX": 1.6129,
+    "rotY": -0.0054,
+    "rotZ": 359.9749,
+    "scaleX": 1.0,
+    "scaleY": 1.0,
+    "scaleZ": 1.0
   },
-  "Nickname": "Spirit Island Chorus",
+  "Nickname": "River Surges in Sunlight",
   "Description": "",
   "GMNotes": "",
   "AltLookAngle": {
@@ -22,7 +22,7 @@
   "ColorDiffuse": {
     "r": 0.0,
     "g": 1.0,
-    "b": 0.2193
+    "b": 0.9331
   },
   "LayoutGroupSortIndex": 0,
   "Value": 0,
