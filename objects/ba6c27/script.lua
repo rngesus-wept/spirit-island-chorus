@@ -2,7 +2,6 @@
 
 TRASH_TARGET = Vector(105.3, 1.2, 7.6)
 
-
 function onLoad()
     for _, object_table in ipairs(self.getObjects()) do
         replaceAsset(object_table)
@@ -24,6 +23,7 @@ function replaceAsset(object_table)
         if object.name == target_name then
             replaced_object = target_bag.takeObject({
                     position = TRASH_TARGET, rotation = Vector(0, 180, 180), guid = object.guid })
+            -- TODO: Delete these afterward?
             break
         end
     end

@@ -63,6 +63,11 @@ in theory one probably ought to at least add a little credit in there or somethi
 8. In the Top Image field, click the folder icon and find the new image for the front.
 9. When TTS asks you to choose between Cloud and Local storage, choose Cloud.
 10. Click Import.
+11. Note the GUID of the spirit's container by right clicking the panel for that spirit (the
+    one that's got the buttons overlaid onto it) and clicking Scripting > GUID:. This will
+    copy the GUID to your clipboard.
+12. As the Game Master (black seat), right click on your newly imported asset and paste the
+    GUID into the GM Notes section.
 
 You now have a more complete TTS file for the spirit board. Right click it and Save Object;
 it is reasonable to replace your original exported file with this one.
@@ -72,6 +77,9 @@ JSON-exploded version of the main module in its own Git repo.
 #+BEGIN_SRC sh
   grep ImageSecondaryURL `git grep -l "$NAME_OF_SPIRIT"` | cut -d\" -f4 | head -n 1
 #+END_SRC
+
+Identifying the container GUID for the spirit from the command line is left as an exercise
+to the reader.
 
 ** Power cards
 
