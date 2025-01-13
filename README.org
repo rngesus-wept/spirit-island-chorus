@@ -129,4 +129,20 @@ hierarchy and respect =index.list=; that is, in addition to adding .json and .lu
 folder tree that includes =contained/= layers, you must also remember to add an object's GUID
 to =index.list= at the appropriate level.
 
+After that, the top-level object should be scripted to induce its replacements =onLoad=.
+
 * In-game patch notes
+
+** River
+  * Growth 3 grants an additional card play for the turn.
+  * Sun elements replace top track 3 (was "2") and 5 (was "4").
+  * Water element replaces bottom track 3 (was "2")
+  * Massive Flooding threshold 3 increased by 1 of each element (4/5/2 total)
+
+*** Sunshine
+Innate replaces threshold 3 (blight removal effect) and adds a threshold 4:
+
+  * Threshold 3 (4/2/1 air)
+      Target gains a Major and may immediately pay for and play it
+  * Threshold 4 (4/2/1/1 moon)
+      You gain a Minor
