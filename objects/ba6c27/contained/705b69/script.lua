@@ -5,3 +5,17 @@ function onLoad(saved_data)
     end
 end
 -- card loading end
+
+spiritName = "River Surges in Sunlight"
+
+function doSetup(params)
+    local color = params.color
+    for _, card in pairs(Player[color].getHandObjects(1)) do
+        if card.getName() == "Boon of Vigor" then
+            card.destruct()
+            Global.call("giveEnergy", { color = color, energy = 1, ignoreDebt = false })
+            break
+        end
+    end
+    return true
+end
