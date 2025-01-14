@@ -7,9 +7,9 @@
     "rotX": 359.6139,
     "rotY": 180.0043,
     "rotZ": 359.6801,
-    "scaleX": 1.53,
+    "scaleX": 1.09,
     "scaleY": 1.0,
-    "scaleZ": 1.53
+    "scaleZ": 1.09
   },
   "Nickname": "Resilience",
   "Description": "",
@@ -25,7 +25,8 @@
     "b": 0.7132
   },
   "Tags": [
-    "Aspect"
+    "Aspect",
+    "Setup"
   ],
   "LayoutGroupSortIndex": 0,
   "Value": 0,

@@ -35,5 +35,7 @@ function replaceAsset(object_table)
             position = drop_location, rotation = Vector(0, 180, 180), guid = object_table.guid })
     if replacement == nil then
         printToAll("Failed to spawn object " .. guid .. "?!")
+    else
+        target_bag.putObject(replacement)
     end
 end
