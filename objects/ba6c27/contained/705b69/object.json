@@ -1,0 +1,58 @@
+{
+  "Name": "CardCustom",
+  "Transform": {
+    "posX": 104.4044,
+    "posY": 5.3761,
+    "posZ": 44.495,
+    "rotX": 359.2649,
+    "rotY": 180.019,
+    "rotZ": 359.8542,
+    "scaleX": 1.53,
+    "scaleY": 1.0,
+    "scaleZ": 1.53
+  },
+  "Nickname": "Sunshine",
+  "Description": "",
+  "GMNotes": "f9ea89",
+  "AltLookAngle": {
+    "x": 0.0,
+    "y": 0.0,
+    "z": 0.0
+  },
+  "ColorDiffuse": {
+    "r": 0.7132,
+    "g": 0.7132,
+    "b": 0.7132
+  },
+  "Tags": [
+    "Aspect",
+    "Setup"
+  ],
+  "LayoutGroupSortIndex": 0,
+  "Value": 0,
+  "Locked": false,
+  "Grid": false,
+  "Snap": true,
+  "IgnoreFoW": false,
+  "MeasureMovement": false,
+  "DragSelectable": true,
+  "Autoraise": true,
+  "Sticky": true,
+  "Tooltip": true,
+  "GridProjection": false,
+  "HideWhenFaceDown": true,
+  "Hands": true,
+  "CardID": 258500,
+  "SidewaysCard": false,
+  "CustomDeck": {
+    "2585": {
+      "FaceURL": "https://steamusercontent-a.akamaihd.net/ugc/33313508835088038/86DE81C77F090AB697908F9386CEDC356CDA9EC4/",
+      "BackURL": "https://steamusercontent-a.akamaihd.net/ugc/2050879209175597317/3D310D899EAA785515F689691EAC56C7E80DE5C4/",
+      "NumWidth": 1,
+      "NumHeight": 1,
+      "BackIsHidden": true,
+      "UniqueBack": false,
+      "Type": 0
+    }
+  }
+}
