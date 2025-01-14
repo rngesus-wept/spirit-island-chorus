@@ -154,3 +154,16 @@ Innate replaces threshold 3 (blight removal effect) and adds a threshold 4:
       Target gains a Major and may immediately pay for and play it
   * Threshold 4 (4/2/1/1 moon)
       You gain a Minor
+
+** Earth
+  * Expanded passive to have benefits scaling on cards played.
+  * Replaced bottom track 4 with Earth element (was "2").
+  * Decreased Gift of Strength threshold 1 from requiring 2 Leaf to requiring 1.
+  * Buffed Rituals of Destruction to always give 2 Fear and have damage scaling with Dahan
+    count (2/2/5 -> 3/4/5 for 1/2/3+ Dahan).
+
+*** Resilience
+  * Replaces Rituals of Destruction with Dark and Tangled Woods.
+  * Starts with 1 Energy.
+  * Halves Energy income.
+  * Using Defend Powers grants mobility, Fear, and Isolate.
