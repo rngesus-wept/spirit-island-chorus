@@ -114,14 +114,15 @@ manipulate the JSON or script state of the spirit, which is all stored in the /s
 at runtime. Note also that scripts have a =onDestroy= method associated with the aspect card
 that reverses those changes.
 
-  * Lightning's Immense (GUID 241617) doubles energy gain from the top track.
-  * Keeper's Spreading Hostility (GUID e738ed) halves energy gain from the top track and
-    grants 1 Energy on setup.
-  * Shadow's Dark Fire (GUID 09004a) grants an extra Moon/Fire element passively, *and*
+  * Lightning's Immense (GUID 1a3d98/241617) doubles energy gain from the top track.
+  * Keeper's Spreading Hostility (GUID f7f008/e738ed) halves energy gain from the top track
+    and grants 1 Energy on setup.
+  * Shadow's Dark Fire (GUID 45e367/09004a) grants an extra Moon/Fire element passively, *and*
     contains scripting that causes the element counter to treat them interchangeably, *and*
-    performs a card replacement from the Minor deck on startup.
-  * Green's Regrowth (GUID ca636b) spawns extra presence markers.
-  * Memory's Mentor (GUID b1c66b) changes the number of cards drawn when drafting a Power.
+    performs a card gain from the Minor deck on startup.
+  * Green's Regrowth (GUID 598ecb/ca636b) spawns extra presence markers.
+  * Memory's Mentor (GUID 0dadff/b1c66b) changes the number of cards drawn when drafting a
+    Power.
 
 Of course, if the rule change imposed by your aspect is not covered here, you'll either have
 to figure out how to hook it into the entire system or (more likely) forgo automation (which
