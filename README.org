@@ -168,3 +168,9 @@ Innate replaces threshold 3 (blight removal effect) and adds a threshold 4:
   * Starts with 1 Energy.
   * Halves Energy income.
   * Using Defend Powers grants mobility, Fear, and Isolate.
+
+** Teeth
+  * Introduces new Teeth "element".
+  * Top track 3, 5, and 7 replaced with new Teeth "element" (formerly 3, Animal, 7)
+  * Original passive ability now scales with Teeth.
+  * Unique Powers now interact with Teeth.
