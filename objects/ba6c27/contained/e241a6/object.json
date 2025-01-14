@@ -1,0 +1,57 @@
+{
+  "Name": "CardCustom",
+  "Transform": {
+    "posX": 100.1148,
+    "posY": 5.379,
+    "posZ": 24.0595,
+    "rotX": 359.6139,
+    "rotY": 180.0043,
+    "rotZ": 359.6801,
+    "scaleX": 1.53,
+    "scaleY": 1.0,
+    "scaleZ": 1.53
+  },
+  "Nickname": "Resilience",
+  "Description": "",
+  "GMNotes": "",
+  "AltLookAngle": {
+    "x": 0.0,
+    "y": 0.0,
+    "z": 0.0
+  },
+  "ColorDiffuse": {
+    "r": 0.7132,
+    "g": 0.7132,
+    "b": 0.7132
+  },
+  "Tags": [
+    "Aspect"
+  ],
+  "LayoutGroupSortIndex": 0,
+  "Value": 0,
+  "Locked": false,
+  "Grid": false,
+  "Snap": false,
+  "IgnoreFoW": false,
+  "MeasureMovement": false,
+  "DragSelectable": true,
+  "Autoraise": true,
+  "Sticky": true,
+  "Tooltip": true,
+  "GridProjection": false,
+  "HideWhenFaceDown": true,
+  "Hands": true,
+  "CardID": 260400,
+  "SidewaysCard": false,
+  "CustomDeck": {
+    "2604": {
+      "FaceURL": "https://steamusercontent-a.akamaihd.net/ugc/2408949625514221650/610E69D0FBB6F1E2A5B41ED23791DD0628B2AD89/",
+      "BackURL": "https://steamusercontent-a.akamaihd.net/ugc/2050879209175599872/EAC4BD2702C1EAC8C5707C6E72DCB418A38D7FB2/",
+      "NumWidth": 1,
+      "NumHeight": 1,
+      "BackIsHidden": true,
+      "UniqueBack": false,
+      "Type": 0
+    }
+  }
+}

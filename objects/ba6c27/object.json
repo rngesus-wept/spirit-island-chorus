@@ -1,11 +1,11 @@
 {
   "Name": "Bag",
   "Transform": {
-    "posX": 102.2185,
-    "posY": 0.396,
-    "posZ": 46.22,
+    "posX": 0.0,
+    "posY": 3.0,
+    "posZ": 0.0,
     "rotX": 0.0,
-    "rotY": 0.0004,
+    "rotY": 0.0026,
     "rotZ": 0.0,
     "scaleX": 2.2,
     "scaleY": 2.2,

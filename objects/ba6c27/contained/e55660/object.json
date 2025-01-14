@@ -1,0 +1,58 @@
+{
+  "Name": "CardCustom",
+  "Transform": {
+    "posX": 101.1746,
+    "posY": 5.368,
+    "posZ": 23.8234,
+    "rotX": 359.9611,
+    "rotY": 179.9997,
+    "rotZ": 1.3668,
+    "scaleX": 1.53,
+    "scaleY": 1.0,
+    "scaleZ": 1.53
+  },
+  "Nickname": "Rituals of Destruction",
+  "Description": "",
+  "GMNotes": "",
+  "AltLookAngle": {
+    "x": 0.0,
+    "y": 0.0,
+    "z": 0.0
+  },
+  "ColorDiffuse": {
+    "r": 0.7132,
+    "g": 0.7132,
+    "b": 0.7132
+  },
+  "Tags": [
+    "Slow",
+    "Unique"
+  ],
+  "LayoutGroupSortIndex": 0,
+  "Value": 0,
+  "Locked": false,
+  "Grid": false,
+  "Snap": true,
+  "IgnoreFoW": false,
+  "MeasureMovement": false,
+  "DragSelectable": true,
+  "Autoraise": true,
+  "Sticky": true,
+  "Tooltip": true,
+  "GridProjection": false,
+  "HideWhenFaceDown": true,
+  "Hands": true,
+  "CardID": 260500,
+  "SidewaysCard": false,
+  "CustomDeck": {
+    "2605": {
+      "FaceURL": "https://steamusercontent-a.akamaihd.net/ugc/2408949625514225566/9C902603E7E9D99D0B41F890A7AA86F2D1CB7359/",
+      "BackURL": "https://steamusercontent-a.akamaihd.net/ugc/2050875404517383766/C3A66D6C764E830C2886603846EDC1982E69C1B4/",
+      "NumWidth": 1,
+      "NumHeight": 1,
+      "BackIsHidden": true,
+      "UniqueBack": false,
+      "Type": 0
+    }
+  }
+}
